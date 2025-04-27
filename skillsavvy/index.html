@@ -126,14 +126,14 @@
             margin-bottom: 40px;
         }
 
-        .about-item:nth-child(even) {
+        /* .about-item:nth-child(even) {
             flex-direction: row-reverse;
-        }
+        } */
 
         .about-item img {
             width: 100%;
             max-width: 500px;
-            border-radius: 10px;
+            border-radius: 10px !important;
         }
 
         .about-item .content {
@@ -150,6 +150,10 @@
             font-size: 1.2rem;
             font-weight: 300;
             margin-top: 20px;
+        }
+
+        .about-item .content li {
+            text-align: left;
         }
 
         /* Services Section */
@@ -172,6 +176,8 @@
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
             border-radius: 15px;
             transition: all 0.3s ease;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
 
         .service-box:hover {
@@ -280,6 +286,12 @@
                 padding-top: 20px;
             }
         }
+
+        @media (max-width: 1000px) {
+            .navbar-brand img {
+                width: 100% !important;
+            }
+        }
     </style>
 </head>
 
@@ -287,7 +299,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
+        <div class="container justify-content-center">
             <a class="navbar-brand" href="#">
                 <img class="w-50" src="./logo.png" alt="Skill Savvy Solution">
             </a>
@@ -319,16 +331,17 @@
             <h2>About Us</h2>
 
             <div class="about-item" data-aos="fade-up">
-                <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="About Us 1">
                 <div class="content">
                     <h3>Our Mission</h3>
                     <p>To bridge the gap between businesses and skilled IT experts with personalized staffing solutions.
                     </p>
                 </div>
+                <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="About Us 1" class="">
             </div>
 
             <div class="about-item" data-aos="fade-up">
-                <img src="https://img.freepik.com/free-photo/business-man-holding-clipboard-with-why-choose-us-question_23-2148932313.jpg" alt="About Us 2">
+                <img src="https://img.freepik.com/free-photo/business-man-holding-clipboard-with-why-choose-us-question_23-2148932313.jpg"
+                    alt="About Us 2">
                 <div class="content">
                     <h3>Why Choose Us?</h3>
                     <p>We offer deep industry expertise and a vast network of pre-vetted IT professionals. Our
@@ -338,7 +351,6 @@
 
             <!-- Values Section -->
             <div class="about-item" data-aos="fade-up">
-                <img src="https://img.freepik.com/free-photo/business-strategy-concept-with-wooden-cubes-wooden-grunge-background-side-view_176474-7646.jpg" alt="Core Values">
                 <div class="content">
                     <h3>Our Core Values</h3>
                     <ul>
@@ -349,6 +361,8 @@
                             solutions.</li>
                     </ul>
                 </div>
+                <img src="https://img.freepik.com/free-photo/business-strategy-concept-with-wooden-cubes-wooden-grunge-background-side-view_176474-7646.jpg"
+                    alt="Core Values">
             </div>
         </div>
     </section>
