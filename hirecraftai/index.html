@@ -1,11 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Craft AI</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hire Craft AI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Hero Section with Full Background Image */
+    .hero {
+      background: url('https://img.freepik.com/free-photo/look-this-group-young-people-casual-clothes-working-modern-office_146671-16519.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    /* About Section Background */
+    #about {
+      background: url('https://img.freepik.com/free-photo/programming-background-collage_23-2149901785.jpg') no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #about::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.65);
+    }
+
+    .about-card {
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-title {
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+
+    .service-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* CTA Section with background image */
+    .cta {
+      background: url('https://img.freepik.com/free-photo/people-office-analyzing-checking-finance-graphs_23-2150377139.jpg') no-repeat center center/cover;
+      color: white;
+      padding: 100px 0;
+      position: relative;
+      text-align: center;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+
+    .cta .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer {
+      background-color: #222;
+      color: #ccc;
+      padding: 30px 0;
+    }
+
+    .nav-link {
+      color: white !important;
+      margin-right: 15px;
+    }
+
+    /* Contact Form Styles */
+    .contact-form {
+      background-color: #f9f9f9;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 15px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    Coming Soon
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">Hire Craft AI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Crafting Smart IT Talent Solutions</h1>
+      <p class="lead mt-4">We connect top-tier tech talent with innovative companies worldwide.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center text-white mb-5">About Us</h2>
+      <div class="about-card">
+        <h3 class="section-title text-center">People-Powered. AI-Driven.</h3>
+        <p>Hire Craft AI was founded to revolutionize IT staffing through a unique blend of human insight and AI. We combine deep industry experience with intelligent sourcing to streamline recruitment, ensuring you hire the right people, faster.</p>
+        <p>We go beyond resumes to find talent that fits your culture, vision, and growth plans.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-5 bg-light" id="services">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title text-center">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 bg-white shadow-sm h-100 text-center">
+            <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241210.jpg" class="service-img" alt="IT Staffing" />
+            <h4>IT Staffing Solutions</h4>
+            <p>Access pre-vetted professionals ready for short or long-term roles.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 bg-white shadow-sm h-100 text-center">
+            <img src="https://img.freepik.com/premium-photo/ai-technology-human-resources-hr-management-concept-hr-manager-touching-ai-visual-screen-human-resources_10541-13603.jpg" class="service-img" alt="AI Talent" />
+            <h4>AI-Assisted Talent Sourcing</h4>
+            <p>Leverage intelligent algorithms to find top talent quickly.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 bg-white shadow-sm h-100 text-center">
+            <img src="https://img.freepik.com/free-photo/career-employment-occupation-recruitment-work-concept_53876-128104.jpg" class="service-img" alt="Permanent Hiring" />
+            <h4>Permanent Hiring</h4>
+            <p>Make long-term hires that align with your values and goals.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 bg-white shadow-sm h-100 text-center">
+            <img src="https://img.freepik.com/free-photo/female-teacher-doing-online-lessons_23-2148999518.jpg" class="service-img" alt="Contract Remote" />
+            <h4>Contract & Remote Staffing</h4>
+            <p>Flexible hiring for remote, hybrid, or on-site needs.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="p-4 bg-white shadow-sm h-100 text-center">
+            <img src="https://img.freepik.com/free-photo/person-working-html-computer_23-2150038853.jpg" class="service-img" alt="Tech Assessment" />
+            <h4>Tech Skill Assessments</h4>
+            <p>Evaluate candidates with real-world tests and industry standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta" id="cta">
+    <div class="container" data-aos="zoom-in">
+      <h2>Let’s Build Something Brilliant</h2>
+      <p class="mt-3">Looking to hire smart? Partner with Hire Craft AI and experience next-gen staffing.</p>
+      <a href="#contact" class="btn btn-light mt-3">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-5" id="contact">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title text-center">Get In Touch</h2>
+      <form class="contact-form">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="name" placeholder="Your Name" required />
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" id="email" placeholder="Your Email" required />
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p>© 2025 Hire Craft AI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
