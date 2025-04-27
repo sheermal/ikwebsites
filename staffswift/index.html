@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Staff Swift AI - IT Staffing Solutions</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./fav.png" type="image/x-icon">
+    <style>
+        #services img {
+            height: 70%;
+        }
+
+        .carousel-item {
+            position: relative;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 100vh;
+        }
+
+        .carousel-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .carousel-caption {
+            z-index: 2;
+            bottom: 25vh;
+        }
+
+        .carousel-caption h5 {
+            font-size: 3.5rem !important;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            animation: fadeInUp 3s ease-in-out;
+        }
+
+        .navbar {
+            background-color: #fff;
+        }
+
+        .navbar-brand img {
+            width: 150px;
+            /* Adjust logo size */
+        }
+
+        .navbar-nav .nav-link {
+            color: #000 !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #FFD700 !important;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .services img {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .services img:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            border-radius: 10px;
+        }
+
+        .contact-form button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 10px;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .services h3 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-top: 20px;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .animate-on-scroll {
+            visibility: hidden;
+        }
+
+        .animate-on-scroll.visible {
+            visibility: visible;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="./logo.png" alt="Staff Swift AI Logo">
+            </a>
+            <!-- Navbar toggle button for mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section" id="home">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="https://img.freepik.com/free-photo/portrait-business-people-worker-team-outside_1150-2632.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Empowering businesses with top-tier <br>IT talent, faster and smarter.</h5>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/free-photo/futuristic-technology-concept_23-2151908097.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Bridging the gap between innovation and <br> workforce with AI-driven staffing solutions.
+                        </h5>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/free-photo/team-building-concept-with-wooden-blocks-wooden-human-figures-it-side-view_176474-10467.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Your success starts with the right team <br>let’s build it together.</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-header">Our Services</h2>
+            <div class="row services">
+                <div class="col-md-4 mb-4">
+                    <img src="https://img.freepik.com/free-vector/business-partners-signing-document-tiny-characters-with-pen-paper-with-signature-seal-flat-illustration_74855-10491.jpg"
+                        alt="Contract Staffing" class="img-fluid">
+                    <h3>Contract Staffing</h3>
+                    <p>Flexible short-term IT professionals for project-based needs.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://img.freepik.com/premium-vector/recruitment-concept-idea-employment-human_277904-2597.jpg"
+                        alt="Permanent Placement" class="img-fluid">
+                    <h3>Permanent Placement</h3>
+                    <p>Full-time IT professionals sourced with precision.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://img.freepik.com/free-vector/online-learning-concept-illustration_114360-4415.jpg"
+                        alt="Remote Talent" class="img-fluid">
+                    <h3>Remote & Hybrid Talent</h3>
+                    <p>Access to global tech talent, ready to work remotely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section bg-light" id="contact">
+        <div class="container">
+            <h2 class="section-header">Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-center align-items-center mb-3">
+                    <div>
+                        <h3 class="text-center">Let's Build Your Team</h3>
+                        <p>Contact us today to start building your dream team of IT professionals.</p>
+                        <!-- <p><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> contact@staffswiftai.com</p> -->
+                        <img src="./logo.png" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form class="contact-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2025 Staff Swift AI | All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add animation visibility on scroll
+        window.addEventListener('scroll', function () {
+            let elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(function (element) {
+                if (element.getBoundingClientRect().top < window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
